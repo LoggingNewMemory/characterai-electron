@@ -1,0 +1,29 @@
+{
+  "main": "main.js",
+  "name": "characterai-electron",
+  "version": "1.0.0",
+  "description": "Unofficial Desktop Client for Character AI",
+  "author": "Kanagawa Yamada <yamadakernel.project@gmail.com>",
+  "homepage": "https://github.com/LoggingNewMemory",
+  "devDependencies": {
+    "electron": "^35.1.2",
+    "electron-builder": "^26.0.12"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --linux snap"
+  },
+  "build": {
+    "appId": "com.kanagawa.yamada.characterai",
+    "productName": "Character AI",
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm"
+      ],
+      "category": "Utility",
+      "icon": "logo/cai.png"
+    }
+  }
+}
